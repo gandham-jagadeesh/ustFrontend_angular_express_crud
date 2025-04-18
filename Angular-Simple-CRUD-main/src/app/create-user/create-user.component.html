@@ -1,0 +1,14 @@
+<h2>Create New User</h2>
+<form (ngSubmit)="createUser()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="newUser.username" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="newUser.password" required>
+  </div>
+  <button type="submit">Create User</button>
+</form>
+<div *ngIf="message" class="success">{{ message }}</div>
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>

@@ -1,0 +1,157 @@
+/* Styles for the DisplayUserComponent */
+
+:host {
+    display: block;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+  li > span { /* Style for user name and password (if you wrap them in a span) */
+    flex-grow: 1;
+    margin-right: 15px;
+    color: #555;
+  }
+  
+  button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:first-of-type {
+    margin-left: auto; /* Push delete button to the right */
+    background-color: #dc3545; /* Red for delete */
+    color: white;
+    margin-right: 8px;
+  }
+  
+  button:first-of-type:hover {
+    background-color: #c82333;
+  }
+  
+  button:last-of-type {
+    background-color: #007bff; /* Blue for edit */
+    color: white;
+  }
+  
+  button:last-of-type:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for the app-update-user component (conditionally rendered) */
+  app-update-user {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  app-update-user h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left; /* Override the global h3 center for this context */
+  }
+  
+  app-update-user form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  app-update-user input[type="text"],
+  app-update-user input[type="password"] {
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  app-update-user button {
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  app-update-user button[type="submit"] {
+    background-color: #28a745; /* Green for update */
+    color: white;
+    border: none;
+  }
+  
+  app-update-user button[type="submit"]:hover {
+    background-color: #1e7e34;
+  }
+  
+  app-update-user button[type="button"] { /* Style for the close button */
+    background-color: #6c757d; /* Gray for close */
+    color: white;
+    border: none;
+  }
+  
+  app-update-user button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive adjustments (optional) */
+  @media (max-width: 600px) {
+    :host {
+      padding: 15px;
+    }
+  
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 15px 0;
+    }
+  
+    li > span {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
